@@ -1,0 +1,42 @@
+<div class="row mt-3">
+    <div class="col-md-6 mx-auto">
+        <div class="card p-3">
+            <div class="card-header py-3">
+                <span style="text-align: center;">
+                    <h4>Editar contacto</h4>
+                </span>
+            </div>
+            <div class="card-body">
+            {{#with contact}}
+                <form action="/contacts/edit" method="POST" enctype="multipart/form-data">
+                    <div class="form-group mb-4">
+                        <input type="text" name="name" class="form-control" value="{{name}}" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="text" name="surname" class="form-control" value="{{surname}}" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="number" name="phone" class="form-control" value="{{phone}}" min="1000000" max="999999999" required>
+                    </div>
+                    <div class="form-group mb-4 text-center">
+                        <img src="{{imageURL}}" height="200px" width="200px">
+                        <input hidden type="text" name="public_id" id="" value="{{public_id}}">
+                        <input hidden type="text" name="id" id="" value="{{id}}">
+                    </div>
+                    <div class="input-group mb-1">
+                        <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input form-control" id="inputGroupFile01">
+                            <label for="inputGroupFile01" class="custom-file-label"></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary form-control py-2">
+                            Actualizar contacto
+                        </button>
+                    </div>
+                </form>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+body {
+    background-image: url('../uploads/fade_bg2.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* .faded-image {
+    background-image: url('../uploads/fade_bg.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+.bg-principal {
+    background-color: aqua;
+}

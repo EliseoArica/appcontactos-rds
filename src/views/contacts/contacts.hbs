@@ -1,0 +1,30 @@
+<div class="container-fluid bg-white p-4 rounded">
+    <h1 class="display-4 mb-4">Tus contactos</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="text-center" scope="col">Nombre</th>
+                <th class="text-center" scope="col">Apellido</th>
+                <th class="text-center" scope="col">Teléfono</th>
+                <th class="text-center" scope="col">Foto</th>
+                <th class="text-center" scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each contacts}}
+            <tr>
+                <td class="align-middle text-center" scope="row">{{name}}</td>
+                <td class="align-middle text-center" scope="row">{{surname}}</td>
+                <td class="align-middle text-center" scope="row">{{phone}}</td>
+                <td class="align-middle text-center" scope="row">
+                    <img src="{{imageURL}}" alt="" height="100px" width="100px">
+                </td>
+                <td class="align-middle text-center" scope="row">
+                    <a href="/contacts/edit/{{id}}" class="btn btn-success">Editar</a>
+                    <a href="/contacts/delete/{{id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
